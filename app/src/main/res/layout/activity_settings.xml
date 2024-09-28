@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/checkbox_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Važiuoti"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_namo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_namo_enabled"
+            android:text="Namo" />
+
+        <CheckBox
+            android:id="@+id/checkbox_parduotuve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_parduotuve_enabled"
+            android:text="Į parduotuvę" />
+
+        <CheckBox
+            android:id="@+id/checkbox_parkas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_parkas_enabled"
+            android:text="Į parką" />
+
+        <CheckBox
+            android:id="@+id/checkbox_ezero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_ezero_enabled"
+            android:text="Prie ežero" />
+
+        <CheckBox
+            android:id="@+id/checkbox_miesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_miesta_enabled"
+            android:text="Į miestą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_fontano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_fontano_enabled"
+            android:text="Prie fontano" />
+
+        <CheckBox
+            android:id="@+id/checkbox_mociute_meile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_mociute_meile_enabled"
+            android:text="Pas močiutę Meilę" />
+
+        <CheckBox
+            android:id="@+id/checkbox_mociute_vale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="vaziuoti_mociute_vale_enabled"
+            android:text="Pas močiutę Valę" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eiti"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_miska"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="eiti_miska_enabled"
+            android:text="Į mišką" />
+
+        <CheckBox
+            android:id="@+id/checkbox_pasivaikscioti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="eiti_pasivaikscioti_enabled"
+            android:text="Pasivaikščioti" />
+
+        <CheckBox
+            android:id="@+id/checkbox_kiema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="eiti_kiema_enabled"
+            android:text="Į kiemą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_gaminti_maista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="eiti_gaminti_maista_enabled"
+            android:text="Gaminti maistą" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valgyti"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_sriuba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_sriuba_enabled"
+            android:text="Sriuba" />
+
+        <CheckBox
+            android:id="@+id/checkbox_mesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_mesa_enabled"
+            android:text="Mėsą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_desreles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_desreles_enabled"
+            android:text="Dešrelių" />
+
+        <CheckBox
+            android:id="@+id/checkbox_bulvytes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_bulvytes_enabled"
+            android:text="Bulvyčių" />
+
+        <CheckBox
+            android:id="@+id/checkbox_ledu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_ledu_enabled"
+            android:text="Ledų" />
+
+        <CheckBox
+            android:id="@+id/checkbox_guminuku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_guminuku_enabled"
+            android:text="Guminukų" />
+
+        <CheckBox
+            android:id="@+id/checkbox_pica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_pica_enabled"
+            android:text="Picą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_makaronu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_makaronu_enabled"
+            android:text="Makaronų" />
+
+        <CheckBox
+            android:id="@+id/checkbox_kiausiniu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_kiausiniu_enabled"
+            android:text="Kiaušinių" />
+
+        <CheckBox
+            android:id="@+id/checkbox_salotu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_salotu_enabled"
+            android:text="Salotų" />
+
+        <CheckBox
+            android:id="@+id/checkbox_cipsu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_cipsu_enabled"
+            android:text="Čipsų" />
+
+        <CheckBox
+            android:id="@+id/checkbox_troskini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_troskini_enabled"
+            android:text="Troškinį" />
+
+        <CheckBox
+            android:id="@+id/checkbox_trapuciu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="valgyti_trapuciu_enabled"
+            android:text="Trapučių" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noriu"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_sokineti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_sokineti_enabled"
+            android:text="Šokinėti" />
+
+        <CheckBox
+            android:id="@+id/checkbox_ciuozineti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_ciuozineti_enabled"
+            android:text="Čiuožinėti" />
+
+        <CheckBox
+            android:id="@+id/checkbox_laistyti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_laistyti_enabled"
+            android:text="Laistyti" />
+
+        <CheckBox
+            android:id="@+id/checkbox_maudytis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_maudytis_enabled"
+            android:text="Maudytis" />
+
+        <CheckBox
+            android:id="@+id/checkbox_persirengti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_persirengti_enabled"
+            android:text="Persirengti" />
+
+        <CheckBox
+            android:id="@+id/checkbox_kartu_paguleti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_kartu_paguleti_enabled"
+            android:text="Kartu pagulėti" />
+
+        <CheckBox
+            android:id="@+id/checkbox_dusas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_dusas_enabled"
+            android:text="Į dušą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_tualetas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_tualetas_enabled"
+            android:text="Į tualetą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_miegoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="noriu_miegoti_enabled"
+            android:text="Miegoti" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gerti"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_sultciu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="gerti_sultciu_enabled"
+            android:text="Sultčių" />
+
+        <CheckBox
+            android:id="@+id/checkbox_citrinu_vandens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="gerti_citrinu_vandens_enabled"
+            android:text="Citrinų vandens" />
+
+        <CheckBox
+            android:id="@+id/checkbox_vandens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="gerti_vandens_enabled"
+            android:text="Vandens" />
+
+        <CheckBox
+            android:id="@+id/checkbox_giros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="gerti_giros_enabled"
+            android:text="Giros" />
+
+        <CheckBox
+            android:id="@+id/checkbox_limonado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="gerti_limonado_enabled"
+            android:text="Limonado" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aš"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_pavarges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="as_pavarges_enabled"
+            android:text="Pavargęs" />
+
+        <CheckBox
+            android:id="@+id/checkbox_piktas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="as_piktas_enabled"
+            android:text="Piktas" />
+
+        <CheckBox
+            android:id="@+id/checkbox_bijau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="as_bijau_enabled"
+            android:text="Bijau" />
+
+        <CheckBox
+            android:id="@+id/checkbox_liudnas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="as_liudnas_enabled"
+            android:text="Liūdnas" />
+
+        <CheckBox
+            android:id="@+id/checkbox_dziaugiuosi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="as_dziaugiuosi_enabled"
+            android:text="Džiaugiuosi" />
+
+        <CheckBox
+            android:id="@+id/checkbox_alkanas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="as_alkanas_enabled"
+            android:text="Alkanas" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skauda"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkbox_galva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_galva_enabled"
+            android:text="Galvą" />
+
+        <CheckBox
+            android:id="@+id/checkbox_dantuka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_dantuka_enabled"
+            android:text="Dantuką" />
+
+        <CheckBox
+            android:id="@+id/checkbox_akyte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_akyte_enabled"
+            android:text="Akytę" />
+
+        <CheckBox
+            android:id="@+id/checkbox_gerkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_gerkle_enabled"
+            android:text="Gerklę" />
+
+        <CheckBox
+            android:id="@+id/checkbox_pilvuka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_pilvuka_enabled"
+            android:text="Pilvuką" />
+
+        <CheckBox
+            android:id="@+id/checkbox_ranka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_ranka_enabled"
+            android:text="Ranką" />
+
+        <CheckBox
+            android:id="@+id/checkbox_koja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="skauda_koja_enabled"
+            android:text="Koją" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Save Changes" />
+
+    </LinearLayout>
+</ScrollView>
