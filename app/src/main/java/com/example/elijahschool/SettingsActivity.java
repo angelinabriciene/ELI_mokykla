@@ -61,7 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
             if (checkboxContainer.getChildAt(i) instanceof CheckBox) {
                 CheckBox checkbox = (CheckBox) checkboxContainer.getChildAt(i);
                 String tag = (String) checkbox.getTag();
-                if (checkbox.isChecked() && tag.contains(category.toLowerCase(new Locale("lt", "LT")))) {
+                if (checkbox.isChecked() && tag.contains(category)) {
                     selectedOptions.add(tag);
                 }
             }
@@ -71,23 +71,23 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void loadPreferences() {
-        loadOptions("Vaziuoti");
-        loadOptions("Eiti");
-        loadOptions("Valgyti");
-        loadOptions("Gerti");
-        loadOptions("Noriu");
-        loadOptions("Skauda");
-        loadOptions("As");
+        loadOptions("AS_NORIU");
+        loadOptions("MAN");
+        loadOptions("REIKIA");
+        loadOptions("NEGALIMA");
+        loadOptions("DAIKTAI");
+        loadOptions("MAISTAS");
+        loadOptions("KUNO_DALYS");
     }
 
     private void savePreferences() {
-        saveOptions("Vaziuoti");
-        saveOptions("Eiti");
-        saveOptions("Valgyti");
-        saveOptions("Gerti");
-        saveOptions("Noriu");
-        saveOptions("Skauda");
-        saveOptions("As");
+        saveOptions("AS_NORIU");
+        saveOptions("MAN");
+        saveOptions("REIKIA");
+        saveOptions("NEGALIMA");
+        saveOptions("DAIKTAI");
+        saveOptions("MAISTAS");
+        saveOptions("KUNO_DALYS");
 
         Toast.makeText(this, "Pasirinkimai išsaugoti", Toast.LENGTH_SHORT).show();
     }

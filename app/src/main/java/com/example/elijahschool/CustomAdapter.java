@@ -28,10 +28,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         this.listener = listener;
     }
 
-    // Method to update the items in the adapter
     public void setItems(List<Item> newItems) {
         this.items = newItems;
-        notifyDataSetChanged(); // This will notify the RecyclerView to refresh the UI with the new data
+        notifyDataSetChanged();
     }
 
     @NonNull

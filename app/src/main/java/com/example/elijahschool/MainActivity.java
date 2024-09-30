@@ -60,13 +60,14 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.OnI
         openSettingsButton.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Palieskite ir laikykite", Toast.LENGTH_SHORT).show());
 
         itemList = new ArrayList<>();
-        itemList.add(new Item(R.drawable.vaziuoti, "Važiuoti"));
-        itemList.add(new Item(R.drawable.eiti, "Eiti"));
-        itemList.add(new Item(R.drawable.valgyti, "Valgyti"));
-        itemList.add(new Item(R.drawable.gerti, "Gerti"));
-        itemList.add(new Item(R.drawable.man, "Noriu"));
-        itemList.add(new Item(R.drawable.skauda, "Skauda"));
-        itemList.add(new Item(R.drawable.as, "Aš"));
+        itemList.add(new Item(R.drawable.as, "AŠ NORIU"));
+        itemList.add(new Item(R.drawable.man, "MAN"));
+        itemList.add(new Item(R.drawable.drugelis, "REIKIA"));
+        itemList.add(new Item(R.drawable.drugelis, "NEGALIMA"));
+        itemList.add(new Item(R.drawable.drugelis, "DAIKTAI"));
+        itemList.add(new Item(R.drawable.drugelis, "MAISTAS"));
+        itemList.add(new Item(R.drawable.drugelis, "KŪNO DALYS"));
+
 
         adapter = new CustomAdapter(itemList, this, this);
         recyclerView.setAdapter(adapter);
@@ -95,33 +96,33 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.OnI
         optionLayout.removeAllViews();
         List<Item> secondaryOptions = new ArrayList<>();
         switch (item.getText()) {
-            case "Važiuoti":
-                handleOption("Važiuoti");
-                secondaryOptions = getSelectedOptions("Vaziuoti");
+            case "AŠ NORIU":
+                handleOption("AŠ NORIU");
+                secondaryOptions = getSelectedOptions("AS_NORIU");
                 break;
-            case "Eiti":
-                handleOption("Eiti");
-                secondaryOptions = getSelectedOptions("Eiti");
+            case "MAN":
+                handleOption("MAN");
+                secondaryOptions = getSelectedOptions("MAN");
                 break;
-            case "Valgyti":
-                handleOption("Valgyti");
-                secondaryOptions = getSelectedOptions("Valgyti");
+            case "REIKIA":
+                handleOption("REIKIA");
+                secondaryOptions = getSelectedOptions("REIKIA");
                 break;
-            case "Gerti":
-                handleOption("Gerti");
-                secondaryOptions = getSelectedOptions("Gerti");
+            case "NEGALIMA":
+                handleOption("NEGALIMA");
+                secondaryOptions = getSelectedOptions("NEGALIMA");
                 break;
-            case "Noriu":
-                handleOption("Noriu");
-                secondaryOptions = getSelectedOptions("Noriu");
+            case "DAIKTAI":
+                handleOption("DAIKTAI");
+                secondaryOptions = getSelectedOptions("DAIKTAI");
                 break;
-            case "Skauda":
-                handleOption("Skauda");
-                secondaryOptions = getSelectedOptions("Skauda");
+            case "MAISTAS":
+                handleOption("MAISTAS");
+                secondaryOptions = getSelectedOptions("MAISTAS");
                 break;
-            case "Aš":
-                handleOption("Aš");
-                secondaryOptions = getSelectedOptions("As");
+            case "KŪNO DALYS":
+                handleOption("KŪNO DALYS");
+                secondaryOptions = getSelectedOptions("KUNO_DALYS");
                 break;
             default:
                 break;
@@ -143,187 +144,286 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.OnI
 
         for (String option : selectedOptionSet) {
             switch (category) {
-                case "Vaziuoti":
+                case "AS_NORIU":
                     switch (option) {
-                        case "vaziuoti_namo_enabled":
-                            selectedOptions.add(new Item(R.drawable.namo, "Namo"));
+                        case "AS_NORIU_VALGYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "VALGYTI"));
                             break;
-                        case "vaziuoti_parduotuve_enabled":
-                            selectedOptions.add(new Item(R.drawable.parduotuve, "Į parduotuvę"));
+                        case "AS_NORIU_ZAISTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŽAISTI"));
                             break;
-                        case "vaziuoti_parkas_enabled":
-                            selectedOptions.add(new Item(R.drawable.seimosparkas, "Į parką"));
+                        case "AS_NORIU_MIEGOTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "MIEGOTI"));
                             break;
-                        case "vaziuoti_ezero_enabled":
-                            selectedOptions.add(new Item(R.drawable.ezero, "Prie ežero"));
+                        case "AS_NORIU_PIESTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PIEŠTI"));
                             break;
-                        case "vaziuoti_miesta_enabled":
-                            selectedOptions.add(new Item(R.drawable.miestas, "Į miestą"));
+                        case "AS_NORIU_PRAUSTIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PRAUSTIS"));
                             break;
-                        case "vaziuoti_fontano_enabled":
-                            selectedOptions.add(new Item(R.drawable.fontanas, "Prie fontano"));
+                        case "AS_NORIU_I_LAUKĄ_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "Į LAUKĄ"));
                             break;
-                        case "vaziuoti_mociute_meile_enabled":
-                            selectedOptions.add(new Item(R.drawable.meile, "Pas močiutę Meilę"));
+                        case "AS_NORIU_PRISIGLAUSTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PRISIGLAUSTI"));
                             break;
-                        case "vaziuoti_mociute_vale_enabled":
-                            selectedOptions.add(new Item(R.drawable.vale, "Pas močiutę Valę"));
+                        case "AS_NORIU_SOKINETI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŠOKINĖTI"));
+                            break;
+                        case "AS_NORIU_ZIURETI_TELEVIZORIU_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŽIŪRĖTI TELEVIZORIŲ"));
+                            break;
+                        case "AS_NORIU_PERSIRENGTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PERSIRENGTI"));
+                            break;
+                        case "AS_NORIU_PASAKOS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PASAKOS"));
+                            break;
+                        case "AS_NORIU_I_TUALETA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "Į TUALETĄ"));
+                            break;
+                        case "AS_NORIU_DRAUGAUTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "DRAUGAUTI"));
                             break;
                     }
                     break;
-                case "Eiti":
+                case "MAN":
                     switch (option) {
-                        case "eiti_miska_enabled":
-                            selectedOptions.add(new Item(R.drawable.miskas, "Į mišką"));
+                        case "MAN_SKAUDA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SKAUDA"));
                             break;
-                        case "eiti_pasivaikscioti_enabled":
-                            selectedOptions.add(new Item(R.drawable.pasivaikscioti, "Pasivaikščioti"));
+                        case "MAN_LIUDNA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "LIŪDNA"));
                             break;
-                        case "eiti_kiema_enabled":
-                            selectedOptions.add(new Item(R.drawable.parkas, "Į kiemą"));
+                        case "MAN_NUOBODU_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "NUOBODU"));
                             break;
-                        case "eiti_gaminti_maista_enabled":
-                            selectedOptions.add(new Item(R.drawable.gaminti, "Gaminti maistą"));
+                        case "MAN_BAISU_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "BAISU"));
+                            break;
+                        case "MAN_SUNKU_SUPRASTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SUNKU SUPRASTI"));
+                            break;
+                        case "MAN_PER_SVIESU_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PER ŠVIESU"));
+                            break;
+                        case "MAN_PER_GARSIAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PER GARSIAI"));
+                            break;
+                        case "MAN_NEPATOGU_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "NEPATOGU"));
+                            break;
+                        case "MAN_KARSTA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KARŠTA"));
+                            break;
+                        case "MAN_SALTA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŠALTA"));
+                            break;
+                        case "MAN_SLAPIA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŠLAPIA"));
                             break;
                     }
                     break;
-                case "Valgyti":
+                case "REIKIA":
                     switch (option) {
-                        case "valgyti_sriuba_enabled":
-                            selectedOptions.add(new Item(R.drawable.sriuba, "Sriuba"));
+                        case "REIKIA_PERSIRENGTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PERSIRENGTI"));
                             break;
-                        case "valgyti_mesa_enabled":
-                            selectedOptions.add(new Item(R.drawable.mesa, "Mėsą"));
+                        case "REIKIA_MIEGOTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "MIEGOTI"));
                             break;
-                        case "valgyti_desreles_enabled":
-                            selectedOptions.add(new Item(R.drawable.desreles, "Dešrelių"));
+                        case "REIKIA_SKAITYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SKAITYTI"));
                             break;
-                        case "valgyti_bulvytes_enabled":
-                            selectedOptions.add(new Item(R.drawable.bulvytes, "Bulvyčių"));
+                        case "REIKIA_VALGYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "VALGYTI"));
                             break;
-                        case "valgyti_ledu_enabled":
-                            selectedOptions.add(new Item(R.drawable.ledai, "Ledų"));
+                        case "REIKIA_MOKYTIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "MOKYTIS"));
                             break;
-                        case "valgyti_guminuku_enabled":
-                            selectedOptions.add(new Item(R.drawable.guminukai, "Guminukų"));
+                        case "REIKIA_ZAISTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŽAISTI"));
                             break;
-                        case "valgyti_pica_enabled":
-                            selectedOptions.add(new Item(R.drawable.pica, "Picą"));
+                        case "REIKIA_SUSITVARKYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SUSITVARKYTI"));
                             break;
-                        case "valgyti_makaronu_enabled":
-                            selectedOptions.add(new Item(R.drawable.makaronai, "Makaronų"));
+                        case "REIKIA_GERTI_VAISTUS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "GERTI VAISTUS"));
                             break;
-                        case "valgyti_kiausiniu_enabled":
-                            selectedOptions.add(new Item(R.drawable.kiausiniai, "Kiaušinių"));
+                        case "REIKIA_PRAUSTIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PRAUSTIS"));
                             break;
-                        case "valgyti_salotu_enabled":
-                            selectedOptions.add(new Item(R.drawable.salotos, "Salotų"));
+                        case "REIKIA_PALAUKTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PALAUKTI"));
                             break;
-                        case "valgyti_cipsu_enabled":
-                            selectedOptions.add(new Item(R.drawable.traskuciai, "Čipsų"));
+                        case "REIKIA_BUTI_TYLIAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "BŪTI TYLIAI"));
                             break;
-                        case "valgyti_troskini_enabled":
-                            selectedOptions.add(new Item(R.drawable.drugelis, "Troškinį"));
+                        case "REIKIA_ISVALYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "IŠVALYTI"));
                             break;
-                        case "valgyti_trapuciu_enabled":
-                            selectedOptions.add(new Item(R.drawable.traputis, "Trapučių"));
+                        case "REIKIA_RASYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "RAŠYTI"));
+                            break;
+                        case "REIKIA_KLAUSYTIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KLAUSYTIS"));
+                            break;
+                        case "REIKIA_I_TUALETA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "Į TUALETĄ"));
+                            break;
+                        case "REIKIA_SUKUOTIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŠUKUOTIS"));
                             break;
                     }
                     break;
-                case "Noriu":
+                case "NEGALIMA":
                     switch (option) {
-                        case "noriu_sokineti_enabled":
-                            selectedOptions.add(new Item(R.drawable.batutas, "Šokinėti"));
+                        case "NEGALIMA_MUSTIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "MUŠTIS"));
                             break;
-                        case "noriu_ciuozineti_enabled":
-                            selectedOptions.add(new Item(R.drawable.ciusti, "Čiuožinėti"));
+                        case "NEGALIMA_SPJAUDYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SPJAUDYTI"));
                             break;
-                        case "noriu_laistyti_enabled":
-                            selectedOptions.add(new Item(R.drawable.laistyti, "Laistyti"));
+                        case "NEGALIMA_METYTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "MĖTYTI"));
                             break;
-                        case "noriu_maudytis_enabled":
-                            selectedOptions.add(new Item(R.drawable.maudytis, "Maudytis"));
+                        case "NEGALIMA_ISEITI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "IŠEITI"));
                             break;
-                        case "noriu_persirengti_enabled":
-                            selectedOptions.add(new Item(R.drawable.persirengti, "Persirengti"));
+                        case "NEGALIMA_SIUKSLINTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŠIUKŠLINTI"));
                             break;
-                        case "noriu_kartu_paguleti_enabled":
-                            selectedOptions.add(new Item(R.drawable.lova, "Kartu pagulėti"));
-                            break;
-                        case "noriu_dusas_enabled":
-                            selectedOptions.add(new Item(R.drawable.dusas, "Į dušą"));
-                            break;
-                        case "noriu_tualetas_enabled":
-                            selectedOptions.add(new Item(R.drawable.tualetas, "Į tualetą"));
-                            break;
-                        case "noriu_miegoti_enabled":
-                            selectedOptions.add(new Item(R.drawable.miegoti, "Miegoti"));
+                        case "NEGALIMA_BEGTI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "BĖGTI"));
                             break;
                     }
                     break;
-                case "Gerti":
+                case "DAIKTAI":
                     switch (option) {
-                        case "gerti_sultciu_enabled":
-                            selectedOptions.add(new Item(R.drawable.sultys, "Sultčių"));
+                        case "DAIKTAI_LOVA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "LOVA"));
                             break;
-                        case "gerti_citrinu_vandens_enabled":
-                            selectedOptions.add(new Item(R.drawable.citrinu, "Citrinų vandens"));
+                        case "DAIKTAI_KEDE_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KĖDĖ"));
                             break;
-                        case "gerti_vandens_enabled":
-                            selectedOptions.add(new Item(R.drawable.vanduo, "Vandens"));
+                        case "DAIKTAI_KNYGA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KNYGA"));
                             break;
-                        case "gerti_giros_enabled":
-                            selectedOptions.add(new Item(R.drawable.drugelis, "Giros"));
+                        case "DAIKTAI_ZAISLAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ŽAISLAI"));
                             break;
-                        case "gerti_limonado_enabled":
-                            selectedOptions.add(new Item(R.drawable.limonadas, "Limonado"));
+                        case "DAIKTAI_BATAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "BATAI"));
+                            break;
+                        case "DAIKTAI_KELNES_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KELNĖS"));
+                            break;
+                        case "DAIKTAI_KEPURE_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KEPURĖ"));
+                            break;
+                        case "DAIKTAI_STRIUKE_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "STRIUKĖ"));
+                            break;
+                        case "DAIKTAI_KELNAITES_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KELNAITĖS"));
+                            break;
+                        case "DAIKTAI_PIRSTINES_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PIRŠTINĖS"));
                             break;
                     }
                     break;
-                case "As":
+                case "MAISTAS":
                     switch (option) {
-                        case "as_pavarges_enabled":
-                            selectedOptions.add(new Item(R.drawable.pavarges, "Pavargęs"));
+                        case "MAISTAS_VAISIAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "VAISIAI"));
                             break;
-                        case "as_piktas_enabled":
-                            selectedOptions.add(new Item(R.drawable.piktas, "Piktas"));
+                        case "MAISTAS_DARZOVES_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "DARŽOVĖS"));
                             break;
-                        case "as_bijau_enabled":
-                            selectedOptions.add(new Item(R.drawable.bijau, "Bijau"));
+                        case "MAISTAS_MESA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "MĖSA"));
                             break;
-                        case "as_liudnas_enabled":
-                            selectedOptions.add(new Item(R.drawable.liudnas, "Liūdnas"));
+                        case "MAISTAS_KOSE_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KOŠĖ"));
                             break;
-                        case "as_dziaugiuosi_enabled":
-                            selectedOptions.add(new Item(R.drawable.laimingas, "Džiaugiuosi"));
+                        case "MAISTAS_SRIUBA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SRIUBA"));
                             break;
-                        case "as_alkanas_enabled":
-                            selectedOptions.add(new Item(R.drawable.alkanas, "Alkanas"));
+                        case "MAISTAS_VANDUO_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "VANDUO"));
+                            break;
+                        case "MAISTAS_ARBATA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "ARBATA"));
+                            break;
+                        case "MAISTAS_PUSRYCIAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PUSRYČIAI"));
+                            break;
+                        case "MAISTAS_PIETUS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PIETŪS"));
+                            break;
+                        case "MAISTAS_VAKARIENE_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "VAKARIENĖ"));
+                            break;
+                        case "MAISTAS_UZKANDZIAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "UŽKANDŽIAI"));
+                            break;
+                        case "MAISTAS_SULTYS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "SULTYS"));
                             break;
                     }
                     break;
-                case "Skauda":
+                case "KUNO_DALYS":
                     switch (option) {
-                        case "skauda_galva_enabled":
-                            selectedOptions.add(new Item(R.drawable.galva, "Galvą"));
+                        case "KUNO_DALYS_GALVA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "GALVA"));
                             break;
-                        case "skauda_dantuka_enabled":
-                            selectedOptions.add(new Item(R.drawable.dantis, "Dantuką"));
+                        case "KUNO_DALYS_VEIDAS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "VEIDAS"));
                             break;
-                        case "skauda_akyte_enabled":
-                            selectedOptions.add(new Item(R.drawable.aki, "Akytę"));
+                        case "KUNO_DALYS_AUSYS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "AUSYS"));
                             break;
-                        case "skauda_gerkle_enabled":
-                            selectedOptions.add(new Item(R.drawable.gerkle, "Gerklę"));
+                        case "KUNO_DALYS_AKYS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "AKYS"));
                             break;
-                        case "skauda_pilvuka_enabled":
-                            selectedOptions.add(new Item(R.drawable.pilva, "Pilvuką"));
+                        case "KUNO_DALYS_NOSIS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "NOSIS"));
                             break;
-                        case "skauda_ranka_enabled":
-                            selectedOptions.add(new Item(R.drawable.ranka, "Ranką"));
+                        case "KUNO_DALYS_PLAUKAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PLAUKAI"));
                             break;
-                        case "skauda_koja_enabled":
-                            selectedOptions.add(new Item(R.drawable.koja, "Koją"));
+                        case "KUNO_DALYS_LUPOS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "LŪPOS"));
+                            break;
+                        case "KUNO_DALYS_DANTYS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "DANTYS"));
+                            break;
+                        case "KUNO_DALYS_BURNA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "BURNA"));
+                            break;
+                        case "KUNO_DALYS_KAKLAS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KAKLAS"));
+                            break;
+                        case "KUNO_DALYS_NUGARA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "NUGARA"));
+                            break;
+                        case "KUNO_DALYS_PECIAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PEČIAI"));
+                            break;
+                        case "KUNO_DALYS_RANKA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "RANKA"));
+                            break;
+                        case "KUNO_DALYS_PIRSTAI_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PIRŠTAI"));
+                            break;
+                        case "KUNO_DALYS_KOJA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "KOJA"));
+                            break;
+                        case "KUNO_DALYS_PEDA_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PĖDA"));
+                            break;
+                        case "KUNO_DALYS_PILVAS_enabled":
+                            selectedOptions.add(new Item(R.drawable.drugelis, "PILVAS"));
                             break;
                     }
                     break;
