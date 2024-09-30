@@ -441,7 +441,7 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.OnI
 
     private void speakText(String text) {
         if (tts != null) {
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
+            tts.speak(text.toLowerCase(new Locale("lt", "LT")), TextToSpeech.QUEUE_FLUSH, null, null);
         }
     }
 
