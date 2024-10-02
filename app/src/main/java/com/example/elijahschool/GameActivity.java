@@ -20,7 +20,6 @@ public class GameActivity extends AppCompatActivity {
         game1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start Game 1 activity
                 Intent intent = new Intent(GameActivity.this, GameRoomsActivity.class);
                 startActivity(intent);
             }
@@ -29,7 +28,6 @@ public class GameActivity extends AppCompatActivity {
         game2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start Game 2 activity
                 Intent intent = new Intent(GameActivity.this, GameLettersActivity.class);
                 startActivity(intent);
             }
@@ -38,7 +36,6 @@ public class GameActivity extends AppCompatActivity {
         game3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start Game 3 activity
                 Intent intent = new Intent(GameActivity.this, GameNumbersActivity.class);
                 startActivity(intent);
             }
