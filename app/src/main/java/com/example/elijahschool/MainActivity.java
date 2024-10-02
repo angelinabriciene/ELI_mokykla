@@ -59,6 +59,15 @@ public class MainActivity extends AppCompatActivity implements CustomAdapter.OnI
 
         openSettingsButton.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Palieskite ir laikykite", Toast.LENGTH_SHORT).show());
 
+        Button openGamesButton = findViewById(R.id.open_games_button);
+        openGamesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GameActivity.class);
+                startActivity(intent);
+            }
+        });
+
         itemList = new ArrayList<>();
         itemList.add(new Item(R.drawable.as, "AŠ NORIU"));
         itemList.add(new Item(R.drawable.man, "MAN"));
